@@ -1,0 +1,4 @@
+.intro__title-symbol {
+    cursor: pointer;
+    transition: font-size .3s ease;
+}
