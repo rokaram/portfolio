@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { NavLink, useHistory } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { Burger } from './Burger/Burger'
 import './Header.css'
 
@@ -15,7 +15,9 @@ export const Header = () => {
             if(nav.classList.contains('nav--active')) {
                 setBurgerActive(true)
             } else {
-                setTimeout(() => { setBurgerActive(false) }, 200)
+                setTimeout(() => { 
+                    setBurgerActive(false)
+                }, 200)
             }
         })
     }, [])
@@ -30,6 +32,7 @@ export const Header = () => {
                         <>
                             <li className="nav__link"><NavLink to="/home">Home</NavLink></li>
                             <li className="nav__link"><NavLink to="/aboutme">About Me</NavLink></li>
+                            <li className="nav__link"><NavLink to="/games">Games</NavLink></li>
                         </>
                     }
                 </ul>

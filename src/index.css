@@ -3,7 +3,7 @@ body {
     padding: 0;
     height: 100vh;
     width: 100%;
-    overflow: hidden;
+    overflow-y: hidden;
     font-family: 'Montserrat', sans-serif;
     user-select: none;
     background-color: #000;
@@ -27,16 +27,15 @@ a {
     color: #fff;
 }
 
+p {
+    word-break: break-word;
+}
+
 .container {
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-.wrapper {
-    position: absolute;
-    top: 0;
     height: 100vh;
-    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
 }

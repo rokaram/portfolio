@@ -5,17 +5,17 @@ import updateArrowImg from '../../images/update-arrow.png'
 import { useAnim } from '../../hooks/anim.hook'
 import { TitleLetter } from '../../component/TitleLetter/TitleLetter'
 import { useState } from 'react'
+import { useMath } from '../../hooks/math.hook'
 
 export const HomePage = () => {
     const { startAnim } = useAnim()
     const updateBtn = React.createRef()
     const title = React.createRef()
-
     const colors = ['#d62828', '#C71585', '#FFD700', '#FF8C00', '#EE82EE', '#32CD32', '#57c4e5']
     const titleText = `Hey. I'm Karamov Roman`.split('')
     const [lettersInfo, setLettersInfo] = useState([])
-
-    const rand = (min, max) => Math.round(Math.random() * (max - min) + min)
+    
+    const { rand } = useMath()
 
     const addElems = () => {
         const arr = []
@@ -40,7 +40,7 @@ export const HomePage = () => {
     }
 
     return (
-        <div className="home">
+        <section className="home">
             <div className="home__inner">
                 <div className="home__block wow jackInTheBox" data-wow-duration="1.5s">
                     <h1 className="home__title" ref={title}>
@@ -58,6 +58,6 @@ export const HomePage = () => {
                     />
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

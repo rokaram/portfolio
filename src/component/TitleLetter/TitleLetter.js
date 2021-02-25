@@ -1,9 +1,10 @@
 import React from 'react'
+import { useMath } from '../../hooks/math.hook'
 import './TitleLetter.css'
 
 export const TitleLetter = ({el, size, color}) => {
     const colors = ['#d62828', '#C71585', '#FFD700', '#FF8C00', '#EE82EE', '#32CD32', '#57c4e5']
-    const rand = (min, max) => Math.round(Math.random() * (max - min) + min)
+    const { rand } = useMath()
 
     let styles = {
         fontSize: size,
