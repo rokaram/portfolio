@@ -3,7 +3,7 @@ import { useMath } from '../../../hooks/math.hook'
 import targetImg from '../../../images/target.png'
 import '../Games.css'
 
-export const AimDot = () => {
+export const CatchDot = () => {
     const field = React.createRef()
     const dot = React.createRef()
     const { rand } = useMath()
@@ -74,8 +74,8 @@ export const AimDot = () => {
                         </>
                         :
                         <>
-                            <p className="gamefield__modal-title">Aim Dot</p>
-                            <p className="gamefield__modal-subtitle">Click on the dot as quickly as possible</p>
+                            <p className="gamefield__modal-title">Catch Dot</p>
+                            <p className="gamefield__modal-subtitle">Catch the moving dot as quickly as possible</p>
                             <p className="gamefield__modal-btn" onClick={ () => setOpenModal(false) }>Start</p>
                         </> }
                     </div>

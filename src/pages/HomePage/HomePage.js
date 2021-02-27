@@ -6,6 +6,7 @@ import { useAnim } from '../../hooks/anim.hook'
 import { TitleLetter } from '../../component/TitleLetter/TitleLetter'
 import { useState } from 'react'
 import { useMath } from '../../hooks/math.hook'
+import { Helmet } from 'react-helmet'
 
 export const HomePage = () => {
     const { startAnim } = useAnim()
@@ -41,6 +42,8 @@ export const HomePage = () => {
 
     return (
         <section className="home">
+            <Helmet title="Home" />
+
             <div className="home__inner">
                 <div className="home__block wow jackInTheBox" data-wow-duration="1.5s">
                     <h1 className="home__title" ref={title}>

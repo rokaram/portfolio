@@ -4,6 +4,29 @@
     height: 100%;
 }
 
+.gamefield::after {
+    content: '';
+    position: absolute;
+    height: 60%;
+    width: 2px;
+    left: 0;
+    top: calc(50% - 50px);
+    transform: translateY(-50%);
+    background-color: #fff;
+}
+
+.gamefield::before {
+    content: '';
+    position: absolute;
+    height: 60%;
+    width: 2px;
+    right: 0;
+    z-index: 10;
+    top: calc(50% - 50px);
+    transform: translateY(-50%);
+    background-color: #fff;
+}
+
 .gamefield__dot {
     width: 50px;
     height: 50px;
@@ -40,7 +63,7 @@
 
 .gamefield__modal-inner {
     text-align: center;
-    transform: translateY(-100px);
+    transform: translateY(-50px);
 }
 
 .gamefield__modal-title {

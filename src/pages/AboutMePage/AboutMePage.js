@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import './AboutMePage.css'
 
 export const AboutMePage = () => {
@@ -7,6 +8,8 @@ export const AboutMePage = () => {
 
     return (
         <div className="aboutme">
+            <Helmet title="About Me" />
+            
             <div className="aboutme__inner">
                 <h1 className="aboutme__title">{ title }</h1>
                 
