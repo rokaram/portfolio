@@ -13,6 +13,8 @@
     "react-helmet": "^6.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.2",
+    "router-dom": "^2.2.3",
+    "use-state-if-mounted": "^1.0.4",
     "web-vitals": "^1.1.0",
     "wowjs": "^1.1.3"
   },

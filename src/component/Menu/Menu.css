@@ -1,0 +1,144 @@
+.menu {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    transform: translateY(-100%);
+    transition: all .7s ease-in;
+    z-index: 10;
+    background: linear-gradient(45deg, #502d00, #470650, #502d00);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.menu__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.menu--open {
+    transition: all .7s ease;
+    transform: translateY(0%);
+}
+
+.menu__link {
+    font-size: 40px;
+    margin: 15px 0;
+    transition: all 1.25s ease;
+}
+
+.menu__link:nth-child(1) {
+    transform: translateY(-800px);
+}
+
+.menu__link:nth-child(2) {
+    transform: translateY(-400px);
+}
+
+.menu__link:nth-child(3) {
+    transform: translateY(-200px);
+}
+
+.menu__link .active {
+    margin: 25px 0;
+    position: relative;
+}
+
+.menu__link .active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    background-color: #fff;
+    bottom: -5px;
+    transform: translateX(-100%);
+}
+
+.menu--open .menu__link {
+    transform: translateY(0px);
+}
+
+.menuBtn {
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    top: 30px;
+    right: 30px;
+    z-index: 11;
+    cursor: pointer;
+}
+
+.menuBtn__line-top {
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    transition: all .3s ease;
+}
+
+.menuBtn__line-middle {
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity .1s ease;
+}
+
+.menuBtn__line-bottom {
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    transition: all .3s ease;
+}
+
+.menu--open .menuBtn__line-top {
+    transform: rotate(45deg);
+    top: 12.5px;
+}
+
+.menu--open .menuBtn__line-middle {
+    opacity: 0;
+}
+
+.menu--open .menuBtn__line-bottom {
+    transform: rotate(-45deg);
+    bottom: 12.5px;
+}
+
+
+
+@media (max-width: 420px) {
+    .menu__link {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 376px) {
+    .menu__link {
+        font-size: 30px;
+    }
+}

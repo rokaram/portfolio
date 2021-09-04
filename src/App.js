@@ -2,33 +2,41 @@ import React, { useEffect } from 'react'
 import './index.css'
 import { useRoutes } from './routes'
 import WOW from 'wowjs'
-import { Header } from './component/Header/Header'
 import { useState } from 'react'
+import { Menu } from './component/Menu/Menu'
 import { Loader } from './component/Loader/Loader'
+import { Translator } from './component/Translator/Translator'
 
 export const App = () => {
     let routes = useRoutes()
-    let [loaded, setLoaded] = useState(true)
+    let [loading, setLoading] = useState(true)
 
     useEffect(() => {
         setTimeout(() => {
             const wow = new WOW.WOW()
             wow.init()
         }, 0)
-        setLoaded(false)
+        
+        setLoading(false)
     }, [])
 
     return (
-        <>
-            { !loaded ?
+        <div className="wrapper">
+            
+            <Loader loading = { loading } />
+
+            { !loading && 
                 <>
-                    <Header />
+                    <Menu />
+                    <Translator />
+                    
                     <div className="container">
+                        
                         { routes }
                     </div>
                 </>
-            : <Loader /> }
-        </>
+            }
+        </div>
     )
 }
 
