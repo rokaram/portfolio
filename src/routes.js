@@ -1,9 +1,10 @@
 import React from 'react'
 import { Switch, Route, Redirect, useLocation } from 'react-router-dom'
 import { useTransition, animated } from 'react-spring'
-import { AboutMe } from './pages/AboutMe/AboutMe'
+import { ContactMe } from './pages/ContactMe/ContactMe'
 import { Home } from './pages/Home/Home'
 import { Projects } from './pages/Projects/Projects'
+import { Skills } from './pages/Skills/Skills'
 
 export const useRoutes = () => {
     const location = useLocation()
@@ -34,12 +35,16 @@ export const useRoutes = () => {
                         <Home />
                     </Route>
 
-                    <Route path={`/aboutme/${lang}`} exact>
-                        <AboutMe />
+                    <Route path={`/skills/${lang}`} exact>
+                        <Skills />
                     </Route>
 
                     <Route path={`/projects/${lang}`} exact>
                         <Projects />
+                    </Route>
+
+                    <Route path={`/contactme/${lang}`} exact>
+                        <ContactMe />
                     </Route>
 
                     { !lang.match(langsReg) || location.pathname === '/' && <Redirect to={'/home/en'} /> }

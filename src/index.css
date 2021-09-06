@@ -3,13 +3,17 @@ body {
     padding: 0;
     height: 100vh;
     width: 100%;
-    overflow-y: hidden;
+    overflow: hidden;
     font-family: 'Montserrat', sans-serif;
     user-select: none;
     color: #fff;
     line-height: 1.4;
     background: url(https://cdn.gambit-rp.ru/wcloud/upload/photos/2021/03/VWe2JPLCdlXfCMMSdxhT_31_833f9be2a7447d7de8af96df5a2dc1d7_cover_full.jpg) no-repeat center center fixed;
     background-size: cover;
+}
+
+.hide {
+    display: none;
 }
 
 * {
@@ -33,8 +37,7 @@ p {
 }
 
 .wrapper {
-    background-color: rgba(70, 0, 71, 0.5);
-    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: rgba(70, 0, 71, 0.6);
 }
 
 .container {
@@ -49,11 +52,6 @@ p {
 .section {
     width: 100%;
     height: 100vh;
-    display: flex;
-    align-items: center;
-}
-
-.waves {
-    position: absolute;
-    bottom: 0;
+    
+    margin-top: 110px;
 }

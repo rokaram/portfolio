@@ -13,12 +13,16 @@ export const Menu = () => {
             path: "/home"
         },
         {
-            title: "About me",
-            path: "/aboutme"
+            title: "Skills",
+            path: "/skills"
         },
         {
             title: "Projects",
             path: "/projects"
+        },
+        {
+            title: "Contact me",
+            path: "/contactme"
         }
     ]
 

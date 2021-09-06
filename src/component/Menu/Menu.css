@@ -5,7 +5,7 @@
     transform: translateY(-100%);
     transition: all .7s ease-in;
     z-index: 10;
-    background: linear-gradient(45deg, #502d00, #470650, #502d00);
+    background: linear-gradient(45deg, #683900, #470650, #683900);
 	background-size: 400% 400%;
 	animation: gradient 5s ease infinite;
 	height: 100vh;
@@ -13,13 +13,13 @@
 
 @keyframes gradient {
 	0% {
-		background-position: 0% 50%;
+		background-position: 0% 25%;
 	}
 	50% {
-		background-position: 100% 50%;
+		background-position: 100% 25%;
 	}
 	100% {
-		background-position: 0% 50%;
+		background-position: 0% 25%;
 	}
 }
 
@@ -37,21 +37,26 @@
 }
 
 .menu__link {
-    font-size: 40px;
+    font-size: 35px;
     margin: 15px 0;
-    transition: all 1.25s ease;
+    line-height: 1;
+    transition: all 1.3s ease;
 }
 
 .menu__link:nth-child(1) {
-    transform: translateY(-800px);
+    transform: translateY(-1000px);
 }
 
 .menu__link:nth-child(2) {
-    transform: translateY(-400px);
+    transform: translateY(-800px);
 }
 
 .menu__link:nth-child(3) {
-    transform: translateY(-200px);
+    transform: translateY(-600px);
+}
+
+.menu__link:nth-child(4) {
+    transform: translateY(-400px);
 }
 
 .menu__link .active {
@@ -134,11 +139,13 @@
 @media (max-width: 420px) {
     .menu__link {
         font-size: 35px;
+        margin: 30px 0px;
     }
 }
 
 @media (max-width: 376px) {
     .menu__link {
         font-size: 30px;
+        margin: 30px 0px;
     }
 }

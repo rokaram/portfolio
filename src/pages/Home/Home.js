@@ -1,5 +1,6 @@
 import React from 'react'
 import { useLocation } from 'react-router'
+import { Helmet } from "react-helmet"
 import './Home.css'
 
 export const Home = () => {
@@ -10,15 +11,16 @@ export const Home = () => {
             ru: "Карамов Роман"
         },
         subtitle: {
-            en: "Two years of experience working in Web Development",
-            ru: "Два года опыта работы в области Веб-разработки"
+            en: "One year of learning in Web Development",
+            ru: "Один год обучения в области Веб-разработки"
         }
     }
 
     return (
-        <div className="section home wow jackInTheBox" data-wow-duration="2s">
+        <section className="home wow jackInTheBox" data-wow-duration="2s" data-wow-delay="2s">
+            <Helmet title="Home"/>
             <h1 className="home__title">{ content.title[lang] }</h1>
             <h3 className="home__subtitle">{ content.subtitle[lang] }</h3>
-        </div>
+        </section>
     )
 }

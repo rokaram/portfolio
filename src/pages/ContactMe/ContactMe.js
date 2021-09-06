@@ -1,13 +1,14 @@
 import React from 'react'
 import { useLocation } from 'react-router'
-import './AboutMe.css'
+import { Helmet } from "react-helmet"
+import './ContactMe.css'
 
-export const AboutMe = () => {
+export const ContactMe = () => {
     const lang = useLocation().pathname.slice(-2)
     const content = {
         title: {
-            ru: "Обо мне",
-            en: "About me"
+            ru: "Связь со мной",
+            en: "Contact me"
         },
         subtitle: {
             ru: "Два года опыта работы в области Веб-разработки",
@@ -17,6 +18,7 @@ export const AboutMe = () => {
 
     return (
         <div className="section">
+            <Helmet title="Contact me" />
             <h1 className="section__title">{ content.title[lang] }</h1>
         </div>
     )

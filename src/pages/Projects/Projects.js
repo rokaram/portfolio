@@ -1,5 +1,6 @@
 import React from "react"
 import { useLocation } from "react-router"
+import { Helmet } from "react-helmet"
 import "./Projects.css"
 
 export const Projects = () => {
@@ -17,6 +18,7 @@ export const Projects = () => {
 
     return (
         <div className="section">
+            <Helmet title="Projects"/>
             <h1 className="section__title">{ content.title[lang] }</h1>
         </div>
     )
