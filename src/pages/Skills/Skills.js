@@ -52,7 +52,7 @@ export const Skills = () => {
         },
         {
             src: css,
-            alt: "vss"
+            alt: "css"
         },
         {
             src: sass,
@@ -63,17 +63,17 @@ export const Skills = () => {
             alt: "less"
         },
         {
-            src: npm,
-            alt: "npm"
-        },
-        {
             src: responDesign,
             alt: "responsive design"
         },
         {
+            src: npm,
+            alt: "npm"
+        },
+        {
             src: git,
             alt: "git"
-        },
+        }
     ]
 
     return (
@@ -83,17 +83,17 @@ export const Skills = () => {
 
             <div className="skills__block">
             <p className={`skills__loader ${!loading && "skills__loader--closed"}`}>Loading...</p>
-                <ul className="skills__list">
-                {
-                    skillImages.map((el, i) => {
-                        return ( 
-                            <li className={`skills__item`} key={i}>
-                                <img className={`skills__icon ${!loading && "skills__icon--active"}`} src={el.src} alt={el.alt} onLoad={ () => loadImgIncrem() } />
-                            </li>
-                        )
-                    })
-                }
-                </ul>
+            <ul className="skills__list">
+            {
+                skillImages.map((el, i) => {
+                    return ( 
+                        <li className={`skills__item`} key={i}>
+                            <img className={`skills__icon ${!loading && "skills__icon--active"}`} src={el.src} alt={el.alt} onLoad={ () => loadImgIncrem() } />
+                        </li>
+                    )
+                })
+            }
+            </ul>
             </div>
         </div>
     )
