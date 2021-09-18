@@ -22,7 +22,7 @@ export const App = () => {
     }, [])
 
     return (
-        <div className="wrapper">
+        <>
             <Helmet titleTemplate="Karamov Roman ~ %s"/>
             <Loader loading = { loading } />
 
@@ -31,13 +31,14 @@ export const App = () => {
                     <Menu />
                     <Translator />
                     
+                    <div className="background-opacity"></div>
+
                     <div className="container">
-                        
                         { routes }
                     </div>
                 </>
             }
-        </div>
+        </>
     )
 }
 

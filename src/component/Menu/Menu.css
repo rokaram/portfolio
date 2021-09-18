@@ -13,13 +13,13 @@
 
 @keyframes gradient {
 	0% {
-		background-position: 0% 25%;
+		background-position: 0% 50%;
 	}
 	50% {
-		background-position: 100% 25%;
+		background-position: 100% 50%;
 	}
 	100% {
-		background-position: 0% 25%;
+		background-position: 0% 50%;
 	}
 }
 
@@ -37,7 +37,7 @@
 }
 
 .menu__link {
-    font-size: 35px;
+    font-size: 30px;
     margin: 25px 0;
     line-height: 1;
     transition: all 1.3s ease;
@@ -136,7 +136,7 @@
 
 @media (max-width: 420px) {
     .menu__link {
-        font-size: 35px;
+        font-size: 30px;
         margin: 30px 0px;
     }
 }

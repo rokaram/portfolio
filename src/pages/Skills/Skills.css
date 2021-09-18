@@ -71,8 +71,7 @@
 
 @media (max-width: 910px) {
     .skills__item {
-        width: 33.3%;
-        padding: 50px;
+        padding: 40px;
     }
 }
 

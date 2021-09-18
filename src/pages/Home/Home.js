@@ -17,10 +17,12 @@ export const Home = () => {
     }
 
     return (
-        <section className="home wow jackInTheBox" data-wow-duration="2s" data-wow-delay="2s">
+        <section className="home">
             <Helmet title="Home"/>
-            <h1 className="home__title">{ content.title[lang] }</h1>
-            <h3 className="home__subtitle">{ content.subtitle[lang] }</h3>
+            <div className="home__inner wow jackInTheBox" data-wow-duration="2s" data-wow-delay="2.25s">
+                <h1 className="home__title">{ content.title[lang] }</h1>
+                <h3 className="home__subtitle">{ content.subtitle[lang] }</h3>
+            </div>
         </section>
     )
 }
